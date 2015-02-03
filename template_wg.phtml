@@ -1,0 +1,12 @@
+<?php echo $rendObj->page;?><br/>
+<?php foreach($rendObj->dresses as $dress):?>
+<div style="float:left; width:200px;">name:<?php echo $dress['name']?></div>
+<div style="float:left; width:100px;">Sku:<?php echo $dress['Sku']?></div>
+<div style="float:left; width:100px;">color:<?php echo $dress['color']?></div>
+<div style="float:left; width:100px;">location:<?php echo $dress['location']?></div>
+<div style="float:left; width:100px;">bust:<?php echo $dress['bust']?></div>
+<div style="float:left; width:100px;">waist:<?php echo $dress['waist']?></div>
+<div style="float:left; width:100px;">hips:<?php echo $dress['hips']?></div>
+<div style="float:left; width:100px;">H-H:<?php echo $dress['H-H']?></div>
+<div>&nbsp;</div>
+<?php endforeach; ?>

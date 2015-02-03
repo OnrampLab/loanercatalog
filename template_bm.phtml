@@ -1,0 +1,16 @@
+<?php echo $rendObj->page;?><br/>
+<?php foreach($rendObj->dresses as $dress):?>
+<div style="float:left; width:150px;">Sku:<?php echo $dress['Sku']?></div>
+<div style="float:left; width:250px;">color:<?php echo $dress['color']?></div>
+<div style="float:left; width:150px;">location:<?php echo $dress['location']?></div>
+<div style="float:left; width:150px;">bust:<?php echo $dress['bust']?></div>
+<div style="float:left; width:150px;">waist:<?php echo $dress['waist']?></div>
+<div style="float:left; width:150px;">hips:<?php echo $dress['hips']?></div>
+<div style="float:left; width:150px;">H-H:<?php echo $dress['H-H']?></div>
+<div style="float:left; width:150px;">closest size:<?php echo $dress['closest size']?></div>
+<div>&nbsp;</div>
+<?php endforeach; ?>
+
+<script type="text/javascript">
+    $("#js-input-closest").show();
+</script>

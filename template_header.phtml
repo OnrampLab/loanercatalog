@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+    <form action="" method="post">
+        bust:<input type="text" name="bust" value="<?php echo $rendObj->post['bust'];?>"/>
+        waist:<input type="text" name="waist" value="<?php echo $rendObj->post['waist'];?>"/>
+        hips:<input type="text" name="hips" value="<?php echo $rendObj->post['hips'];?>"/>
+        H-H:<input type="text" name="H-H" value="<?php echo $rendObj->post['H-H'];?>"/>
+        <div id="js-input-closest" style="display:none; float:left;">
+            closest size:<input type="text" name="closest" value="<?php echo $rendObj->post['closest'];?>"/>
+        </div>
+        <select name="page" id="js-select-page">
+            <option value="wg">Wedding dress</option>
+            <option value="bm">Bridesmaids</option>
+        </select>
+        <input type="submit" value="Submit" />
+    </form>
+    
+    <script type="text/javascript">
+        $("#js-select-page").change(function() {
+            if($("#js-select-page").val() == "wg"){
+                $("#js-input-closest").hide("slow");
+            } else {
+                $("#js-input-closest").show("show");
+            }
+        });
+        
+        $("#js-select-page").val("<?php echo $rendObj->page;?>");
+    </script>
