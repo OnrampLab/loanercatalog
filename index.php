@@ -18,7 +18,7 @@ function router()
     $rendObj = new stdClass;
     $rendObj->page = $_POST['page'];
     
-    if($_get['action'] == 'download'){
+    if($_GET['action'] == 'download'){
         $downloadHelper = new downloadHelper();
         $downloadHelper->dowmloadCsv();
         return;
